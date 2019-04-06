@@ -6,6 +6,9 @@
   </head>
   <body>
     <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="http://placehold.it/102x83" width="102" height="83" alt="Логотип Седоны">
+      </a>
       <nav class="main-nav">
         <button class="main-nav__close-btn" type="button">X</button>
         <div class="main-nav__wrapper">
@@ -24,74 +27,79 @@
             </li>
           </ul>
         </div>
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="http://placehold.it/102x83" width="102" height="83" alt="Логотип Седоны">
-        </a>
         <button class="main-nav__open-btn" type="button">Показать меню</button>
       </nav>
     </header>
     <main class="page-main">
-      <section class="feedback">
-        <div class="feedback__wrapper">
-          <img class="photo-gallery__background" src="http://placehold.it/321x389" width="321" height="389" alt="Добро пожаловать в Седону">
-          <h1 class="feedback__title">Оставьте свой отзыв</h1>
-          <p class="feedback__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-          <form class="feedback__user-data feedback-form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="feedback-form__username">
-              <legend class="feedback-form__title">Представьтесь:</legend>
-              <label class="feedback-form__field-description">Имя<sup>*</sup>:
-                <input class="feedback-form__text-field" type="text" name="username" placeholder="Петр">
-              </label>
-              <label class="feedback-form__field-description">Фамилия<sup>*</sup>:
-                <input class="feedback-form__text-field" type="text" name="surname" placeholder="Иванов">
-              </label>
-              <label class="feedback-form__field-description">Отчество:
-                <input class="feedback-form__text-field" type="text" name="middlename" placeholder="Александрович">
-              </label>
-            </fieldset>
-            <fieldset class="feedback-form__user-contacts">
-              <legend class="feedback-form__title">Контактная информация:</legend>
-              <label class="feedback-form__field-description">Контактный телефон<sup>*</sup>:
-                <input class="feedback-form__text-field" type="tel" name="phone" placeholder="Введите телефон">
-              </label>
-              <label class="feedback-form__field-description">Электронная почта<sup>*</sup>:
-                <input class="feedback-form__text-field" type="email" name="email" placeholder="Введите e-mail">
-              </label>
-            </fieldset>
-            <fieldset class="feedback-form__user-impression">
-              <legend class="feedback-form__title">Ваше общее впечатление:</legend>
-              <label class="feedback-form__field-description--bold"><input class="feedback-form__radio" type="radio" name="user-impression" value="Скорее положительное" checked> Скорее положительное</label>
-              <label class="feedback-form__field-description--bold"><input class="feedback-form__radio" type="radio" name="user-impression" value="Скорее отрицательное"> Скорее отрицательное</label>
-              <label class="feedback-form__field-description--bold"><input class="feedback-form__radio" type="radio" name="user-impression" value="Затрудняюсь ответить"> Затрудняюсь ответить</label>
-            </fieldset>
-            <fieldset class="feedback-form__places">
-              <legend class="feedback-form__title">Посещенные достопримечательности:</legend>
-              <label class="feedback-form__field-description--bold"><input class="feedback-form__checkbox" type="checkbox" name="place" value="Мост Дьявола" checked> Мост Дьявола</label>
-              <label class="feedback-form__field-description--bold"><input class="feedback-form__checkbox" type="checkbox" name="place" value="Гора-Колокол" checked> Гора-Колокол</label>
-              <label class="feedback-form__field-description--bold"><input class="feedback-form__checkbox" type="checkbox" name="place" value="Слайд-Парк" checked> Слайд-Парк</label>
-              <label class="feedback-form__field-description--bold"><input class="feedback-form__checkbox" type="checkbox" name="place" value="Красные скалы"> Красные скалы</label>
-            </fieldset>
-            <label class="feedback-form__title">Опишите свои эмоции:
-              <textarea class="feedback-form__emotions" name="emotions" placeholder="Опишите подробно все свои восторги">
-              </textarea>
-            </label>
-            <button class="feedback-form__btn" type="submit">Отправить отзыв</button>
-          </form>
+      <section class="banner">
+        <h2 class="banner__title visually-hidden">Добро пожаловать в Седону!</h2>
+        <div class="banner__wrapper">
+          <img class="banner__background" src="http://placehold.it/321x389" width="320" height="389" alt="Добро пожаловать в Седону">
         </div>
+      </section>
+      <section class="info-block">
+        <h1 class="info-block__title">Оставьте свой отзыв</h1>
+        <p class="info-block__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </section>
+      <section class="feedback-form">
+        <h2 class="feedback-form__titile visually-hidden">Форма для отзыва</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="feedback-form__block feedback-form__block--user">
+            <legend class="feedback-form__title">Представьтесь:</legend>
+            <label class="feedback-form__field">Имя<sup>*</sup>:
+              <input class="feedback-form__input" type="text" name="username" placeholder="Петр">
+            </label>
+            <label class="feedback-form__field">Фамилия<sup>*</sup>:
+              <input class="feedback-form__input" type="text" name="surname" placeholder="Иванов">
+            </label>
+            <label class="feedback-form__field">Отчество:
+              <input class="feedback-form__input" type="text" name="middlename" placeholder="Александрович">
+            </label>
+          </fieldset>
+          <fieldset class="feedback-form__block feedback-form__block--contacts">
+            <legend class="feedback-form__title">Контактная информация:</legend>
+            <label class="feedback-form__field">Контактный телефон<sup>*</sup>:
+              <input class="feedback-form__input" type="tel" name="phone" placeholder="Введите телефон">
+            </label>
+            <label class="feedback-form__field">Электронная почта<sup>*</sup>:
+              <input class="feedback-form__input" type="email" name="email" placeholder="Введите e-mail">
+            </label>
+          </fieldset>
+          <fieldset class="feedback-form__block feedback-form__block--impression">
+            <legend class="feedback-form__title">Ваше общее впечатление:</legend>
+            <label class="feedback-form__field radio"><input class="feedback-form__radio" type="radio" name="user-impression" value="Скорее положительное" checked> Скорее положительное</label>
+            <label class="feedback-form__field radio"><input class="feedback-form__radio" type="radio" name="user-impression" value="Скорее отрицательное"> Скорее отрицательное</label>
+            <label class="feedback-form__field radio"><input class="feedback-form__radio" type="radio" name="user-impression" value="Затрудняюсь ответить"> Затрудняюсь ответить</label>
+          </fieldset>
+          <fieldset class="feedback-form__block feedback-form__block--places">
+            <legend class="feedback-form__title">Посещенные достопримечательности:</legend>
+            <label class="feedback-form__field checkbox"><input class="feedback-form__checkbox" type="checkbox" name="place" value="Мост Дьявола" checked> Мост Дьявола</label>
+            <label class="feedback-form__field checkbox"><input class="feedback-form__checkbox" type="checkbox" name="place" value="Гора-Колокол" checked> Гора-Колокол</label>
+            <label class="feedback-form__field checkbox"><input class="feedback-form__checkbox" type="checkbox" name="place" value="Слайд-Парк" checked> Слайд-Парк</label>
+            <label class="feedback-form__field checkbox"><input class="feedback-form__checkbox" type="checkbox" name="place" value="Красные скалы"> Красные скалы</label>
+          </fieldset>
+          <fieldset class="feedback-form__block feedback-form__block--emotions">
+            <legend class="feedback-form__title">Опишите свои эмоции:</legend>
+            <textarea class="feedback-form__emotions" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+            <button class="feedback-form__btn" type="submit">Отправить отзыв</button>
+          </fieldset>
+        </form>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <h3 class="page-footer__title">#visitSedona</h3>
+        <h2 class="page-footer__title">#visitSedona</h2>
         <ul class="page-footer__social social">
           <li class="social__item"><a class="social__link social-link--twitter" href="https://www.twitter.com/htmlacademy">Twitter</a></li>
           <li class="social__item"><a class="social__link social-link--facebook" href="https://www.facebook.com/htmlacademy">Facebook</a></li>
           <li class="social__item"><a class="social__link social-link--youtube" href="https://www.youtube.com/htmlacademy">Youtube</a></li>
         </ul>
-        <a class="page-footer__developers" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
-        <a class="page-footer__logo-link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="page-footer__logo" src="http://placehold.it/27x34"  width="27" height="34" alt="HTMLAcademy">
-        </a>
+        <div class="page-footer_copyright copyright">
+          <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="copyright__logo" src="http://placehold.it/27x34"  width="27" height="34" alt="HTMLAcademy">
+          </a>
+        </div>
       </div>
     </footer>
     <section class="modal error visually-hidden">
