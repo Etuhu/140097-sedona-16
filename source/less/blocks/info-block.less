@@ -1,0 +1,32 @@
+.info-block {
+  margin: 0;
+  padding: 30px;
+  .base-text();
+  &--photo {
+    line-height: 24px;
+  }
+  &--blue {
+    color: @white-light;
+  }
+
+  background-color: @white-light;
+  &--grey {
+    background-color: #eeeeee;
+  }
+  &--blue {
+    background-color: @blue-light;
+  }
+}
+
+.info-block__title {
+  .base-title();
+}
+
+.info-block--blue .info-block__title {
+  color: @white-light;
+}
+
+.info-block__text {
+  .base-text();
+  line-height: 24px;
+}
