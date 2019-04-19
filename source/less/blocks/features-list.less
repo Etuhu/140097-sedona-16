@@ -1,4 +1,7 @@
 .features-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 20px;
   margin: 0;
 
@@ -9,4 +12,25 @@
 
 .features-list__title {
   .base-title();
+}
+
+@media (min-width: @tablet-width) {
+  .features-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .features-list__item {
+    width: 256px;
+  }
+
+  .features-list__item--souvenirs {
+    order: 3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features-list__item {
+    width: 400px;
+  }
 }

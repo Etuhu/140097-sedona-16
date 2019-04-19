@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -32,51 +33,71 @@
       </a>
     </header>
     <main class="page-main">
-      <section class="banner">
-        <h2 class="banner__title visually-hidden">Добро пожаловать в Седону!</h2>
-        <div class="banner__wrapper">
-          <img class="banner__text" src="img/text-sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
-        </div>
-      </section>
-      <section class="info-block--photo">
-        <h1 class="info-block__title">Фото и видео</h1>
-        <p class="info-block__text info-block__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-      </section>
-      <section class="photo-gallery">
-        <ul class="photo-gallery__list photoalbum">
-          <li class="photoalbum__item">
-            <a class="photoalbum__fullsize-image" href="#"><img class="photoalbum__image" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы"></a>
-            <h3 class="photoalbum__title">Неродные просторы</h3>
-            <span class="photoalbum__author">Автор фото: Борис</span>
-            <span class="photoalbum__rate">1350</span>
-          </li>
-          <li class="photoalbum__item">
-            <a class="photoalbum__fullsize-image" href="#"><img class="photoalbum__image" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность"></a>
-            <h3 class="photoalbum__title">Местная растительность</h3>
-            <span class="photoalbum__author">Автор фото: Сергей</span>
-            <span class="photoalbum__rate">143</span>
-          </li>
-          <li class="photoalbum__item">
-            <a class="photoalbum__fullsize-image" href="#"><img class="photoalbum__image" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север"></a>
-            <h3 class="photoalbum__title">Дорога на север</h3>
-            <span class="photoalbum__author">Автор фото: Петр</span>
-            <span class="photoalbum__rate">96</span>
-          </li>
-          <li class="photoalbum__item">
-            <a class="photoalbum__fullsize-image" href="#"><img class="photoalbum__image" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола"></a>
-            <h3 class="photoalbum__title">Неродные просторы</h3>
-            <span class="photoalbum__author">Автор фото: Антон</span>
-            <span class="photoalbum__rate">254</span>
-          </li>
-        </ul>
-      </section>
-      <section class="video-clip">
-        <div class="video-clip__wrapper">
-          <h2 class="video-clip__title">Все еще сомневаетесь?</h2>
-          <p class="video-clip__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-          <video class="video-clip__clip" width="321" height="201" poster="img/video-mobile@1x.jpg" controls></video>
-        </div>
-      </section>
+      <div class="page-main__wrapper">
+        <section class="banner">
+          <h2 class="banner__title visually-hidden">Добро пожаловать в Седону!</h2>
+          <div class="banner__wrapper">
+            <img class="banner__text" src="img/text-sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
+          </div>
+        </section>
+        <section class="info-block--photo">
+          <h1 class="info-block__title">Фото и видео</h1>
+          <p class="info-block__text info-block__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        </section>
+        <section class="photo-gallery">
+          <ul class="photo-gallery__list photoalbum">
+            <li class="photoalbum__item">
+              <a class="photoalbum__fullsize-image" href="#">
+                <img class="photoalbum__image photoalbum__image--mobile" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
+                <img class="photoalbum__image photoalbum__image--tablet" src="img/photo-sunset-tablet@1x.jpg" width="648" height="400" alt="Неродные просторы">
+                <img class="photoalbum__image photoalbum__image--desktop" src="img/photo-sunset-desktop@1x.jpg" width="1200" height="400" alt="Неродные просторы">
+              </a>
+              <h3 class="photoalbum__title">Неродные просторы</h3>
+              <span class="photoalbum__author">Автор фото: Борис</span>
+              <span class="photoalbum__rate">1350</span>
+            </li>
+            <li class="photoalbum__item">
+              <a class="photoalbum__fullsize-image" href="#">
+                <img class="photoalbum__image photoalbum__image--mobile" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
+                <img class="photoalbum__image photoalbum__image--tablet" src="img/photo-cactus-tablet@1x.jpg" width="324" height="267" alt="Местная растительность">
+                <img class="photoalbum__image photoalbum__image--desktop" src="img/photo-cactus-desktop@1x.jpg" width="400" height="267" alt="Местная растительность">
+              </a>
+              <h3 class="photoalbum__title">Местная растительность</h3>
+              <span class="photoalbum__author">Автор фото: Сергей</span>
+              <span class="photoalbum__rate">143</span>
+            </li>
+            <li class="photoalbum__item">
+              <a class="photoalbum__fullsize-image" href="#">
+                <img class="photoalbum__image photoalbum__image--mobile" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
+                <img class="photoalbum__image photoalbum__image--tablet" src="img/photo-roads-tablet@1x.jpg" width="324" height="267" alt="Дорога на север">
+                <img class="photoalbum__image photoalbum__image--desktop" src="img/photo-roads-desktop@1x.jpg" width="400" height="267" alt="Дорога на север">
+              </a>
+              <h3 class="photoalbum__title">Дорога на север</h3>
+              <span class="photoalbum__author">Автор фото: Петр</span>
+              <span class="photoalbum__rate">96</span>
+            </li>
+            <li class="photoalbum__item">
+              <a class="photoalbum__fullsize-image" href="#">
+                <img class="photoalbum__image photoalbum__image--mobile" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
+                <img class="photoalbum__image photoalbum__image--tablet" src="img/photo-bridge-tablet@1x.jpg" width="324" height="267" alt="Мост дьявола">
+                <img class="photoalbum__image photoalbum__image--desktop" src="img/photo-bridge-desktop@1x.jpg" width="400" height="267" alt="Мост дьявола">
+              </a>
+              <h3 class="photoalbum__title">Мост дьявола</h3>
+              <span class="photoalbum__author">Автор фото: Антон</span>
+              <span class="photoalbum__rate">254</span>
+            </li>
+          </ul>
+        </section>
+        <section class="video-clip">
+          <div class="video-clip__wrapper">
+            <h2 class="video-clip__title">Все еще сомневаетесь?</h2>
+            <p class="video-clip__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            <video class="video-clip__clip video-clip__clip--mobile" width="320" height="201" poster="img/video-mobile@1x.jpg" controls></video>
+            <video class="video-clip__clip video-clip__clip--tablet" width="648" height="499" poster="img/video-tablet@1x.jpg" controls></video>
+            <video class="video-clip__clip video-clip__clip--desktop" width="800" height="500" poster="img/video-desktop@1x.jpg" controls></video>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">

@@ -1,6 +1,7 @@
 .info-block {
   margin: 0;
   padding: 30px;
+  box-sizing: border-box;
   line-height: 21px;
 
   &--promo {
@@ -10,6 +11,10 @@
   &--photo,
   &--form {
     line-height: 24px;
+  }
+
+  &--form {
+    min-height: 200px;
   }
 
   &--blue {
@@ -30,4 +35,45 @@
 
 .info-block--blue .info-block__title {
   color: @white-light;
+}
+
+@media (min-width: @tablet-width) {
+  .info-block--blue {
+    width: 256px;
+    min-height: 256px;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .info-block--promo {
+    width: 768px;
+    min-height: 205px;
+  }
+
+  .info-block--grey {
+    width: 256px;
+    min-height: 256px;
+  }
+
+  .info-block--photo {
+    width: 768px;
+    min-height: 210px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info-block--blue {
+    width: 400px;
+    min-height: 256px;
+  }
+
+  .info-block--promo {
+    width: 1200px;
+    min-height: 205px;
+  }
+
+  .info-block--grey {
+    width: 400px;
+    min-height: 256px;
+  }
 }
