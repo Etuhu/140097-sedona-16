@@ -1,5 +1,7 @@
 .hotel-search {
+  margin: 0;
   padding: 30px;
+  box-sizing: border-box;
 }
 
 .hotel-search__title {
@@ -10,4 +12,16 @@
 .hotel-search__link {
   .btn();
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .hotel-search {
+    min-height: 318px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hotel-search {
+    min-height: 318px;
+  }
 }

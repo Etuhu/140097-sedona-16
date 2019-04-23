@@ -1,7 +1,41 @@
 .video-clip {
+  margin: 0 auto;
   background-color: @white-light;
 }
 
 .video-clip__title {
   .base-title();
+}
+
+.video-clip__clip--desktop,
+.video-clip__clip--tablet {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .video-clip__wrapper {
+    padding: 0 60px;
+  }
+
+  .video-clip__clip--mobile {
+    display: none;
+  }
+
+  .video-clip__clip--tablet {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video-clip__wrapper {
+    padding: 0 200px;
+  }
+
+  .video-clip__clip--tablet {
+    display: none;
+  }
+
+  .video-clip__clip--desktop {
+    display: block;
+  }
 }

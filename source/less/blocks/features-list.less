@@ -1,5 +1,10 @@
 .features-list {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 40px;
   margin: 0;
 
   line-height: 21px;
@@ -9,4 +14,31 @@
 
 .features-list__title {
   .base-title();
+}
+
+@media (min-width: @tablet-width) {
+  .features-list {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 55px;
+    padding-bottom: 60px;
+  }
+
+  .features-list__item {
+    width: 256px;
+  }
+
+  .features-list__item--souvenirs {
+    order: 3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features-list {
+    padding-bottom: 80px;
+  }
+
+  .features-list__item {
+    width: 400px;
+  }
 }

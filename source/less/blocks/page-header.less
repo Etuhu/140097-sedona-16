@@ -1,3 +1,39 @@
 .page-header {
-  background-color: @white-light;
+  position: relative;
+  margin-bottom: -27px;
+}
+
+.page-header__logo-image--tablet {
+  display: none;
+}
+
+.page-header__logo-image--desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .page-header__logo-image--tablet {
+    display: block;
+  }
+
+  .page-header__logo-image--mobile {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo-image--tablet {
+    display: none;
+  }
+
+  .page-header__logo-image--desktop {
+    display: block;
+  }
 }
