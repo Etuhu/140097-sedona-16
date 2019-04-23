@@ -11,21 +11,8 @@
 }
 
 .photoalbum {
-  display: flex;
-  flex-direction: column;
-
-  min-width: 280px;
-  margin: 0 auto;
-  padding: 0;
-
+  padding: 0 20px;
   list-style: none;
-}
-
-.photoalbum__item {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
 }
 
 .photoalbum__image--tablet,
@@ -35,14 +22,17 @@
 
 @media (min-width: @tablet-width) {
   .photoalbum {
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 648px;
+    padding: 0 60px;
   }
 
   .photoalbum__item {
-    min-width: 324px;
+    width: 50%;
+  }
+
+  .photoalbum__item--fullwidth {
+    width: 100%;
   }
 
   .photoalbum__image--mobile {
@@ -56,14 +46,15 @@
 
 @media (min-width: @desktop-width) {
   .photoalbum {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 1200px;
+    padding: 0;
   }
 
-  .photoalbum__image--mobile {
-    display: none;
+  .photoalbum__item {
+    width: 33.3%;
+  }
+
+  .photoalbum__item--fullwidth {
+    width: 100%;
   }
 
   .photoalbum__image--tablet {

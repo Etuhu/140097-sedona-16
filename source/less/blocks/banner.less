@@ -1,13 +1,6 @@
 .banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  min-width: 320px;
-  min-height: 158px;
   padding-top: 52px;
-  padding-left: 46px;
-  box-sizing: border-box;
+  padding-bottom: 67px;
 
   background-color: #a3847c;
   background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -16,16 +9,18 @@
 }
 
 .banner--mainpage {
-  min-height: 389px;
   padding-top: 90px;
+  padding-bottom: 78px;
   padding-left: 20px;
+  padding-right: 19px;
 
   background-position: -225px 0;
+  background-size: auto;
 }
 
 @media (min-width: @tablet-width) {
   .banner {
-    min-width: 768px;
+    width: 768px;
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: center;
@@ -34,12 +29,15 @@
   .banner--mainpage {
     width: 768px;
     height: 518px;
+    padding: 0;
+    padding-top: 77px;
+    box-sizing: border-box;
   }
 }
 
 @media (min-width: @desktop-width) {
   .banner {
-    min-width: 1200px;
+    width: 1200px;
 
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-position: center;
