@@ -28,6 +28,8 @@ body {
 }
 
 .base-title() {
+  margin: 0;
+
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -37,13 +39,34 @@ body {
 }
 
 .btn() {
+  display: block;
   border: 0;
+  box-sizing: border-box;
 
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: @white-light;
   text-transform: uppercase;
+  text-align: center;
 
   background-color: @blue-light;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

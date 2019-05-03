@@ -1,4 +1,6 @@
 .banner {
+  position: relative;
+
   padding-top: 52px;
   padding-bottom: 67px;
 
@@ -8,13 +10,26 @@
   background-position: -220px -225px;
 }
 
+.banner::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  display: block;
+  width: 320px;
+  height: 27px;
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-size: auto;
+  background-origin: content-box;
+}
+
 .banner--mainpage {
   padding-top: 90px;
-  padding-bottom: 78px;
+  padding-bottom: 79px;
   padding-left: 20px;
   padding-right: 19px;
 
-  background-position: -225px 0;
+  background-position: -224px 0;
   background-size: auto;
 }
 

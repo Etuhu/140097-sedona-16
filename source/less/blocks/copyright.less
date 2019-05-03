@@ -1,5 +1,30 @@
 .copyright__text {
+  padding-top: 3px;
+
   line-height: 26px;
   color: @black-light;
   text-decoration: none;
+}
+
+.copyright__logo--hover,
+.copyright__logo--down {
+  display: none;
+}
+
+.copyright__link:hover .copyright__logo,
+.copyright__link:focus .copyright__logo {
+  display: none;
+}
+
+.copyright__link:hover .copyright__logo--hover,
+.copyright__link:focus .copyright__logo--hover {
+  display: block;
+}
+
+.copyright__link:active .copyright__logo {
+  display: none;
+}
+
+.copyright__link:active .copyright__logo--down {
+  display: block;
 }

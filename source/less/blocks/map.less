@@ -1,4 +1,6 @@
 .map {
+  position: relative;
+
   min-height: 350px;
   width: 100%;
 
@@ -6,6 +8,19 @@
   background-image: url("../img/bg-map-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.map::before {
+  position: absolute;
+  bottom: 46.2%;
+  left: 45.5%;
+  content: "";
+  display: block;
+  width: 27px;
+  height: 27px;
+
+  background-image: url("../img/icon-map-marker.svg");
+  background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {

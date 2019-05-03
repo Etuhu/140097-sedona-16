@@ -5,7 +5,26 @@
   line-height: 21px;
 
   &--promo {
+    position: relative;
+    padding-top: 39px;
+    padding-bottom: 20px;
     line-height: 26px;
+  }
+
+  &--promo::after {
+    position: absolute;
+    bottom: -62px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 320px;
+    height: 37px;
+    padding-top: 39px;
+
+    line-height: 26px;
+
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
   }
 
   &--photo,
@@ -21,6 +40,10 @@
     display: flex;
     flex-direction: column;
     padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    background-color: @grey-light;
   }
 
   background-color: @white-light;
@@ -30,17 +53,61 @@
   .base-title();
 }
 
+.info-block__text {
+  margin: 0;
+}
+
+.info-block__number {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.info-block__description {
+  margin: 0;
+}
+
+.info-block--promo .info-block__title {
+  margin-bottom: 26px;
+}
+
 .info-block__blue {
+  padding: 27px;
+  padding-top: 63px;
+  padding-bottom: 40px;
+
   color: @white-light;
   background-color: @blue-light;
 }
 
+.info-block__blue--left {
+  padding-top: 38px;
+}
+
 .info-block__blue .info-block__title {
+  margin-bottom: 9px;
+
   color: @white-light;
 }
 
 .info-block__grey {
-  background-color: @grey-light;
+  position: relative;
+  padding: 27px 15px;
+}
+
+.info-block__grey:not(:last-child)::after {
+  content: "";
+  position: relative;
+  bottom: -27px;
+  left: -15px;
+  display: block;
+  width: 280px;
+  height: 1px;
+  background-color: @black-light;
+  opacity: 0.1;
+}
+
+.info-block__grey .info-block__title {
+  margin-bottom: 9px;
 }
 
 .info-block--picture {
