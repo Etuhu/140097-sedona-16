@@ -132,24 +132,44 @@
 }
 
 @media (min-width: @tablet-width) {
+  .info-block__title {
+    font-size: 21px;
+  }
+
+  .info-block--promo .info-block__title {
+    margin-bottom: 28px;
+  }
+
   .info-block__blue {
     width: 256px;
-    min-height: 256px;
+    padding: 45px;
     box-sizing: border-box;
-    padding: 0;
+  }
+
+  .info-block__blue--left .info-block__title {
+    padding-left: 8px;
+    padding-right: 7px;
+  }
+
+  .info-block__number {
+    margin-bottom: 21px;
   }
 
   .info-block--grey-row {
     flex-direction: row;
+    padding: 45px 0;
   }
-
 
   .info-block--picture {
     flex-direction: row;
   }
 
   .info-block--promo {
-    min-height: 205px;
+    padding: 50px 70px;
+  }
+
+  .info-block--promo::after {
+    display: none;
   }
 
   .info-block__image {
@@ -167,22 +187,71 @@
   }
 
   .info-block__grey {
-    width: 256px;
-    min-height: 256px;
+    width: 33.3%;
+    padding: 0 40px;
+    box-sizing: border-box;
   }
 
-  .info-block--photo {
-    min-height: 210px;
+  .info-block__grey--middle {
+    padding: 0 55px;
   }
+
+  .info-block__grey--last {
+    padding: 0 50px;
+  }
+
+  .info-block__grey:not(:last-child)::after {
+    display: none;
+  }
+
+  // .info-block--photo {
+  // }
 }
 
 @media (min-width: @desktop-width) {
+  .info-block--promo {
+    padding: 50px 290px;
+  }
+
   .info-block__blue {
     width: 400px;
+    padding-top: 53px;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+  .info-block__blue--left {
+    padding-left: 54px;
+    padding-top: 56px;
+  }
+
+  .info-block__blue .info-block__title {
+    padding: 0 40px;
+  }
+
+  .info-block__blue--left .info-block__title {
+    padding: 0 70px;
+  }
+
+  .info-block__blue--left .info-block__description {
+    padding: 0 30px;
+  }
+
+  .info-block--grey-row {
+    padding-top: 48px;
+    padding-bottom: 65px;
   }
 
   .info-block__grey {
     width: 400px;
+  }
+
+  .info-block__grey--middle {
+    padding: 0 65px;
+  }
+
+  .info-block__grey .info-block__title {
+    padding: 0 70px;
   }
 
   .info-block__image {

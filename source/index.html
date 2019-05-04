@@ -12,7 +12,7 @@
         <button class="main-nav__close-btn" type="button"></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list site-list--left">
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--current">
               <a class="site-list__link">Главная</a>
             </li>
             <li class="site-list__item">
@@ -41,6 +41,7 @@
         <h2 class="banner__title visually-hidden">Добро пожаловать в Седону!</h2>
         <div class="banner__wrapper">
           <img class="banner__text" src="img/text-sedona-index.svg" width="281" height="214" alt="Добро пожаловать в Седону">
+          <img class="banner__text banner__text--tablet" src="img/text-sedona-index.svg" width="460" height="350" alt="Добро пожаловать в Седону">
         </div>
       </section>
       <section class="info-block info-block--promo">
@@ -56,18 +57,24 @@
         <div class="info-block__image info-block__image--right"></div>
       </section>
       <ul class="features-list">
-        <li class="features-list__item">
+        <li class="features-list__item features-list__item--housing">
           <img class="features-list_icon" src="img/icon-house.svg" width="37" height="36" alt="Жилье">
+          <img class="features-list_icon features-list_icon--big" src="img/icon-house.svg" width="75" height="72" alt="Жилье">
           <h3 class="features-list__title">Жилье</h3>
           <p class="features-list__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
         <li class="features-list__item features-list__item--souvenirs">
           <img class="features-list_icon" src="img/icon-gift.svg" width="32" height="38" alt="Сувениры">
+          <img class="features-list_icon features-list_icon--big" src="img/icon-gift.svg" width="64" height="75" alt="Сувениры">
           <h3 class="features-list__title">Сувениры</h3>
-          <p class="features-list__description">Не только китайского, но и местного производства!</p>
+          <p class="features-list__description features-list__description--souvenirs">
+            <span>Не только китайского,</span>
+            <span>но и местного производства!</span>
+          </p>
         </li>
         <li class="features-list__item features-list__item--eat">
           <img class="features-list_icon" src="img/icon-burger.svg" width="40" height="35" alt="Еда">
+          <img class="features-list_icon features-list_icon--big" src="img/icon-burger.svg" width="77" height="68" alt="Еда">
           <h3 class="features-list__title">Еда</h3>
           <p class="features-list__description">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
         </li>
@@ -86,12 +93,12 @@
           <p class="info-block__number">— №3 —</p>
           <p class="info-block__description">Все интересные места находятся очень близко</p>
         </div>
-        <div class="info-block__grey">
+        <div class="info-block__grey info-block__grey--middle">
           <h2 class="info-block__title">Красивая дорога</h2>
           <p class="info-block__number">— №4 —</p>
           <p class="info-block__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </div>
-        <div class="info-block__grey">
+        <div class="info-block__grey info-block__grey--last">
           <h2 class="info-block__title">Мало туристов</h2>
           <p class="info-block__number">— №5 —</p>
           <p class="info-block__description">Большинство едет в гранд каньон и толпится там</p>
@@ -101,7 +108,10 @@
         <h2 class="hotel-search__title visually-hidden">Поиск отеля</h2>
         <div class="hotel-search__wrapper">
           <p class="hotel-search__title">Заинтересовались?</p>
-          <p class="hotel-search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <p class="hotel-search__text">
+            <span>Укажите предполагаемые даты поездки,</span>
+            <span>и мы покажем вам лучшие предложения гостиниц в седоне</span>
+          </p>
           <a class="hotel-search__link" href="#">Найти гостиницу</a>
         </div>
       </section>
