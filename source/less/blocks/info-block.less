@@ -27,13 +27,19 @@
     background-repeat: no-repeat;
   }
 
-  &--photo,
-  &--form {
+  &--photo {
+    position: relative;
+
+    padding: 0 24px;
+    padding-top: 38px;
+    padding-bottom: 27px;
+
     line-height: 24px;
   }
 
   &--form {
     min-height: 200px;
+    line-height: 24px;
   }
 
   &--grey-row {
@@ -68,6 +74,22 @@
 
 .info-block--promo .info-block__title {
   margin-bottom: 26px;
+}
+
+.info-block--photo .info-block__title {
+  margin-bottom: 26px;
+}
+
+.info-block--photo::after {
+  content: "";
+  position: relative;
+  bottom: -27px;
+  left: -24px;
+  display: block;
+  width: 320px;
+  height: 1px;
+  background-color: @black-light;
+  opacity: 0.1;
 }
 
 .info-block__blue {

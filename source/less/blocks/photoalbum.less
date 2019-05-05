@@ -1,17 +1,63 @@
+.photoalbum__item {
+  padding-top: 22px;
+  padding-bottom: 17px;
+}
+
+.photoalbum__item::after {
+  content: "";
+  position: relative;
+  bottom: -17px;
+  left: -20px;
+  display: block;
+  width: 320px;
+  height: 1px;
+  background-color: @black-light;
+  opacity: 0.1;
+}
+
+.photoalbum__text-block {
+  padding-top: 9px;
+  text-align: left;
+}
+
 .photoalbum__title,
 .photoalbum__rate {
+  margin: 0;
   font-size: 14px;
   font-weight: 700;
   color: @black-light;
   text-transform: uppercase;
 }
 
+.photoalbum__rate {
+  position: relative;
+  margin-top: 7px;
+  padding-left: 36px;
+}
+
+.photoalbum__rate::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  display: block;
+  width: 22px;
+  height: 20px;
+  background-image: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+}
+
 .photoalbum__author {
+  margin: 0;
   text-transform: none;
 }
 
 .photoalbum {
+  margin: 0;
   padding: 0 20px;
+
+  background-color: @white-light;
+
   list-style: none;
 }
 

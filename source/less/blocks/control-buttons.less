@@ -1,0 +1,33 @@
+.control-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-right: 23px;
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+
+.control-buttons__replay:hover path,
+.control-buttons__replay:focus path,
+.control-buttons__subtitles:hover path,
+.control-buttons__subtitles:focus path,
+.control-buttons__fullscreen:hover polygon,
+.control-buttons__fullscreen:focus polygon {
+  fill: @darkgrey-light;
+}
+
+.control-buttons__replay:active path,
+.control-buttons__subtitles:active path,
+.control-buttons__fullscreen:active polygon {
+  background-color: @darkgrey-light;
+  opacity: 0.3;
+}
+
+.control-buttons__subtitles {
+  padding-top: 1px;
+  margin-left: 101px;
+}
+
+.control-buttons__fullscreen {
+  padding-top: 1px;
+}
