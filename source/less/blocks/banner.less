@@ -39,9 +39,11 @@
 @media (min-width: @tablet-width) {
   .banner {
     width: 768px;
+    padding-top: 90px;
+    padding-bottom: 120px;
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: 0 27px;
+    background-position: 0 -201px;
   }
 
   .banner::after {
@@ -50,16 +52,17 @@
     background-image: url("../img/bg-intro-triangle-tablet.svg");
   }
 
-  .banner__wrapper {
-    margin-top: 27px;
-  }
-
   .banner--mainpage {
     width: 768px;
     height: 545px;
     padding: 0;
     padding-top: 77px;
     box-sizing: border-box;
+    background-position: 0 27px;
+  }
+
+  .banner__wrapper {
+    margin-top: 27px;
   }
 
   .banner__text {
@@ -75,9 +78,10 @@
 @media (min-width: @desktop-width) {
   .banner {
     width: 1200px;
+    padding-top: 101px;
 
     background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-position: 0 27px;
+    background-position: 0 -190px;
   }
 
   .banner::after {
@@ -89,5 +93,7 @@
   .banner--mainpage {
     width: 1200px;
     height: 545px;
+    padding-top: 77px;
+    background-position: 0 27px;
   }
 }

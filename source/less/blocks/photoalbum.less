@@ -1,3 +1,12 @@
+.photoalbum {
+  margin: 0;
+  padding: 0 20px;
+
+  background-color: @white-light;
+
+  list-style: none;
+}
+
 .photoalbum__item {
   padding-top: 22px;
   padding-bottom: 17px;
@@ -16,6 +25,9 @@
 }
 
 .photoalbum__text-block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding-top: 9px;
   text-align: left;
 }
@@ -52,15 +64,6 @@
   text-transform: none;
 }
 
-.photoalbum {
-  margin: 0;
-  padding: 0 20px;
-
-  background-color: @white-light;
-
-  list-style: none;
-}
-
 .photoalbum__image--tablet,
 .photoalbum__image--desktop {
   display: none;
@@ -71,10 +74,16 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 60px;
+    padding-top: 42px;
   }
 
   .photoalbum__item {
     width: 50%;
+    padding: 0;
+  }
+
+  .photoalbum__item::after {
+    display: none;
   }
 
   .photoalbum__item--fullwidth {
@@ -88,6 +97,41 @@
   .photoalbum__image--tablet {
     display: block;
   }
+
+  .photoalbum__item--fullwidth .photoalbum__text-block {
+    padding: 16px 20px;
+    box-sizing: border-box;
+  }
+
+  .photoalbum__text-block {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+    padding-right: 29px;
+    padding-bottom: 17px;
+    box-sizing: border-box;
+
+    background-color: #f2f2f2;
+  }
+
+  .photoalbum__text-block--dark {
+    padding-right: 36px;
+
+    background-color: #eaeaea;
+  }
+
+  .photoalbum__text-block .photoalbum__title {
+    width: 100%;
+  }
+
+  .photoalbum__rate {
+    margin-top: -10px;
+  }
+
+  .photoalbum__rate::before {
+    bottom: 14px;
+    left: 4px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -96,6 +140,7 @@
   }
 
   .photoalbum__item {
+    position: relative;
     width: 33.3%;
   }
 
@@ -109,5 +154,26 @@
 
   .photoalbum__image--desktop {
     display: block;
+  }
+
+  .photoalbum__text-block,
+  .photoalbum__item--fullwidth .photoalbum__text-block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .photoalbum__title,
+  .photoalbum__rate,
+  .photoalbum__author {
+    color: @white-light;
+  }
+
+  .photoalbum__rate::before {
+    background-image: url("../img/icon-like-white.svg");
   }
 }

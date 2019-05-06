@@ -31,3 +31,75 @@
 .control-buttons__fullscreen {
   padding-top: 1px;
 }
+
+.control-buttons__progress-line,
+.control-buttons__progress-marker {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .control-buttons {
+    position: relative;
+    justify-content: space-between;
+    padding-top: 36px;
+    padding-right: 41px;
+    padding-left: 35px;
+  }
+
+  .control-buttons__progress-line {
+    position: absolute;
+    top: 45px;
+    left: 93px;
+    display: block;
+    width: 389px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .control-buttons__progress-marker {
+    position: absolute;
+    top: 42px;
+    left: 206px;
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: @white-light;
+  }
+
+  .control-buttons__subtitles {
+    padding-top: 0;
+    margin-left: 442px;
+  }
+
+  .control-buttons__replay path,
+  .control-buttons__subtitles path,
+  .control-buttons__fullscreen polygon {
+    fill: @white-light;
+  }
+
+  .control-buttons__replay:hover path,
+  .control-buttons__replay:focus path,
+  .control-buttons__subtitles:hover path,
+  .control-buttons__subtitles:focus path,
+  .control-buttons__fullscreen:hover polygon,
+  .control-buttons__fullscreen:focus polygon {
+    fill: rgba(255, 255, 255, 0.6);
+  }
+
+  .control-buttons__replay:active path,
+  .control-buttons__subtitles:active path,
+  .control-buttons__fullscreen:active polygon {
+    fill: @white-light-down;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .control-buttons__progress-line {
+    width: 540px;
+  }
+
+  .control-buttons__subtitles {
+    margin-left: 592px;
+  }
+}
