@@ -84,20 +84,24 @@
           </fieldset>
           <fieldset class="feedback-form__block feedback-form__block--places">
             <legend class="feedback-form__title">Посещенные достопримечательности:</legend>
-            <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Мост Дьявола" id="bridge" checked>
-            <label class="feedback-form__field checkbox" for="bridge">Мост Дьявола</label>
-            <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Гора-Колокол" id="mountain" checked>
-            <label class="feedback-form__field checkbox" for="mountain">Гора-Колокол</label>
-            <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Слайд-Парк" id="park" checked>
-            <label class="feedback-form__field checkbox" for="park">Слайд-парк</label>
-            <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Красные скалы" id="rocks">
-            <label class="feedback-form__field checkbox" for="rocks">Красные скалы</label>
+            <div class="feedback-form__checkbox-wrapper">
+              <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Мост Дьявола" id="bridge" checked>
+              <label class="feedback-form__field feedback-form__field--checkbox" for="bridge">Мост Дьявола</label>
+              <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Гора-Колокол" id="mountain" checked>
+              <label class="feedback-form__field feedback-form__field--checkbox" for="mountain">Гора-Колокол</label>
+              <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Слайд-Парк" id="park" checked>
+              <label class="feedback-form__field feedback-form__field--checkbox" for="park">Слайд-парк</label>
+              <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Красные скалы" id="rocks">
+              <label class="feedback-form__field feedback-form__field--checkbox" for="rocks">Красные скалы</label>
+            </div>
           </fieldset>
           <fieldset class="feedback-form__block feedback-form__block--emotions">
             <legend class="feedback-form__title">Опишите свои эмоции:</legend>
             <textarea class="feedback-form__textarea" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
-            <button class="feedback-form__btn" type="submit">Отправить отзыв</button>
-            <span class="feedback-form__footnote">* — обязательные поля</span>
+            <div class="feedback-form__footnote-wrapper">
+              <button class="feedback-form__btn" type="submit">Отправить отзыв</button>
+              <span class="feedback-form__footnote">* — обязательные поля</span>
+            </div>
           </fieldset>
         </form>
       </section>
