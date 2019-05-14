@@ -20,7 +20,7 @@
             </li>
           </ul>
           <ul class="main-nav__list site-list site-list--right">
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--current">
               <a class="site-list__link" href="form.html">Форма отзыва</a>
             </li>
             <li class="site-list__item">
@@ -36,7 +36,7 @@
         <img class="page-header__logo-image--desktop" src="img/logo-sedona-desktop.svg" width="187" height="96" alt="Логотип Седоны">
       </a>
     </header>
-    <main class="page-main">
+    <main class="page-main page-main--form">
       <section class="banner">
         <h2 class="banner__title visually-hidden">Добро пожаловать в Седону!</h2>
         <div class="banner__wrapper">
@@ -62,15 +62,17 @@
           </fieldset>
           <fieldset class="feedback-form__block feedback-form__block--contacts">
             <legend class="feedback-form__title">Контактная информация:</legend>
-            <label class="feedback-form__field" for="phone">Контактный телефон<span>*</span>:</label>
-            <div class="feedback-form__field-wrapper">
-              <input class="feedback-form__input" type="tel" name="phone" id="phone" placeholder="Введите телефон">
-              <span class="feedback-form__icon-block feedback-form__icon-block--phone"></span>
-            </div>
-            <label class="feedback-form__field" for="email">Электронная почта<span>*</span>:</label>
-            <div class="feedback-form__field-wrapper">
-              <input class="feedback-form__input" type="email" name="email" id="email" placeholder="Введите e-mail">
-              <span class="feedback-form__icon-block feedback-form__icon-block--email"></span>
+            <div class="feedback-form__contacts-wrapper">
+              <label class="feedback-form__field" for="phone"><span class="feedback-form__hidden-text">Контактный </span>телефон<span>*</span>:</label>
+              <div class="feedback-form__field-wrapper">
+                <input class="feedback-form__input" type="tel" name="phone" id="phone" placeholder="Введите телефон">
+                <span class="feedback-form__icon-block feedback-form__icon-block--phone"></span>
+              </div>
+              <label class="feedback-form__field" for="email">Электронная почта<span>*</span>:</label>
+              <div class="feedback-form__field-wrapper">
+                <input class="feedback-form__input" type="email" name="email" id="email" placeholder="Введите e-mail">
+                <span class="feedback-form__icon-block feedback-form__icon-block--email"></span>
+              </div>
             </div>
           </fieldset>
           <fieldset class="feedback-form__block feedback-form__block--impression">
@@ -86,13 +88,13 @@
             <legend class="feedback-form__title">Посещенные достопримечательности:</legend>
             <div class="feedback-form__checkbox-wrapper">
               <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Мост Дьявола" id="bridge" checked>
-              <label class="feedback-form__field feedback-form__field--checkbox" for="bridge">Мост Дьявола</label>
+              <label class="feedback-form__field feedback-form__field--checkbox feedback-form__field--bridge" for="bridge">Мост Дьявола</label>
               <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Гора-Колокол" id="mountain" checked>
-              <label class="feedback-form__field feedback-form__field--checkbox" for="mountain">Гора-Колокол</label>
+              <label class="feedback-form__field feedback-form__field--checkbox feedback-form__field--mountain" for="mountain">Гора-Колокол</label>
               <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Слайд-Парк" id="park" checked>
-              <label class="feedback-form__field feedback-form__field--checkbox" for="park">Слайд-парк</label>
+              <label class="feedback-form__field feedback-form__field--checkbox feedback-form__field--park" for="park">Слайд-парк</label>
               <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Красные скалы" id="rocks">
-              <label class="feedback-form__field feedback-form__field--checkbox" for="rocks">Красные скалы</label>
+              <label class="feedback-form__field feedback-form__field--checkbox feedback-form__field--rocks" for="rocks">Красные скалы</label>
             </div>
           </fieldset>
           <fieldset class="feedback-form__block feedback-form__block--emotions">
@@ -104,6 +106,20 @@
             </div>
           </fieldset>
         </form>
+      </section>
+      <section class="modal modal--error">
+        <div class="modal__wrapper">
+          <h2 class="modal__title">Что-то пошло не так!</h2>
+          <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button class="modal__btn">Ок</button>
+        </div>
+      </section>
+      <section class="modal modal--feedback-success">
+        <div class="modal__wrapper">
+          <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+          <p class="modal__description"><span class="modal__text-block">Спасибо за ваше участие, ваш отзыв уже поступил к нам.</span> <span class="modal__text-block">В ближайшее время мы опубликуем его на сайте.</span></p>
+          <button class="modal__btn">Закрыть окно</button>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
@@ -124,19 +140,5 @@
         </div>
       </div>
     </footer>
-    <section class="modal modal--error visually-hidden">
-      <div class="modal__wrapper">
-        <h2 class="modal__title">Что-то пошло не так!</h2>
-        <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="modal__btn">Ок</button>
-      </div>
-    </section>
-    <section class="modal modal--feedback-success visually-hidden">
-      <div class="modal__wrapper">
-        <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-        <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-        <button class="modal__btn">Закрыть окно</button>
-      </div>
-    </section>
   </body>
 </html>
