@@ -33,10 +33,6 @@
   padding-left: 4px;
 }
 
-.features-list_icon--big {
-  display: none;
-}
-
 .features-list__title {
   .base-title();
 }
@@ -95,10 +91,20 @@
     padding-top: 3px;
   }
 
+  .features-list__item--housing .features-list_icon {
+    width: 75px;
+    height: 72px;
+  }
+
   .features-list__item--souvenirs {
     order: 3;
     margin-top: 0;
     padding-left: 0;
+  }
+
+  .features-list__item--souvenirs .features-list_icon {
+    width: 64px;
+    height: 75px;
   }
 
   .features-list__item--eat {
@@ -106,14 +112,14 @@
     padding-top: 6px;
   }
 
-  .features-list_icon {
-    display: none;
-    margin: 0 auto;
-    margin-bottom: 27px;
+  .features-list__item--eat .features-list_icon {
+    width: 77px;
+    height: 68px;
   }
 
-  .features-list_icon--big {
-    display: block;
+  .features-list_icon {
+    margin: 0 auto;
+    margin-bottom: 27px;
   }
 
   .features-list__title {

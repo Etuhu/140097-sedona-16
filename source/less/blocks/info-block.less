@@ -164,10 +164,20 @@
 
 .info-block__image--right {
   background-image: url("../img/main-city-mobile@1x.jpg");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/main-city-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 .info-block__image--left {
   background-image: url("../img/main-bridge-mobile@1x.jpg");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/main-bridge-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -218,11 +228,21 @@
 
   .info-block__image--right {
     background-image: url("../img/main-city-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/main-city-tablet@2x.jpg");
+      background-size: 512px auto;
+    }
   }
 
   .info-block__image--left {
     order: -1;
     background-image: url("../img/main-bridge-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/main-bridge-tablet@2x.jpg");
+      background-size: 512px auto;
+    }
   }
 
   .info-block__grey {
@@ -342,10 +362,20 @@
 
   .info-block__image--right {
     background-image: url("../img/main-city-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/main-city-desktop@2x.jpg");
+      background-size: 800px auto;
+    }
   }
 
   .info-block__image--left {
     background-image: url("../img/main-bridge-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/main-bridge-desktop@2x.jpg");
+      background-size: 800px auto;
+    }
   }
 
   .info-block--form {
