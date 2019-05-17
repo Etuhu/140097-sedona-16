@@ -6,20 +6,25 @@
 
   background-color: #a3847c;
   background-image: url("../img/bg-back-mobile@1x.jpg");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 768px auto;
+  }
   background-repeat: no-repeat;
-  background-position: -225px -231px;
+  background-position: -226px -230px;
 }
 
 .banner::after {
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   content: "";
   display: block;
   width: 320px;
   height: 27px;
   background-image: url("../img/bg-intro-triangle-mobile.svg");
-  background-size: auto;
+  background-size: cover;
 }
 
 .banner--mainpage {
@@ -27,29 +32,34 @@
   padding-bottom: 79px;
   padding-left: 20px;
   padding-right: 19px;
-
   background-position: -224px 0;
-  background-size: auto;
-}
+  background-size: 768px auto;
 
-.banner__text--tablet {
-  display: none;
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-size: 768px auto;
+    background-position: -225px 0;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .banner {
     width: 768px;
-    padding-top: 90px;
-    padding-bottom: 120px;
+    padding-top: 93px;
+    padding-bottom: 109px;
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: 0 -201px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   .banner::after {
     width: 768px;
     height: 57px;
     background-image: url("../img/bg-intro-triangle-tablet.svg");
+    background-size: auto;
   }
 
   .banner--mainpage {
@@ -66,12 +76,13 @@
   }
 
   .banner__text {
-    display: none;
+    width: 460px;
+    height: 80px;
   }
 
-  .banner__text--tablet {
-    display: block;
-    margin: 0 auto;
+  .banner__text--index {
+    width: 460px;
+    height: 350px;
   }
 }
 
@@ -79,9 +90,15 @@
   .banner {
     width: 1200px;
     padding-top: 101px;
+    padding-bottom: 111px;
 
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-position: 0 -190px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 
   .banner::after {
@@ -95,5 +112,11 @@
     height: 545px;
     padding-top: 77px;
     background-position: 0 27px;
+    background-size: 1200px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-size: 1200px auto;
+      background-position: 0 26px;
+    }
   }
 }
