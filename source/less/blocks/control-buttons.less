@@ -7,20 +7,25 @@
   box-sizing: border-box;
 }
 
-.control-buttons__replay:hover path,
-.control-buttons__replay:focus path,
-.control-buttons__subtitles:hover path,
-.control-buttons__subtitles:focus path,
-.control-buttons__fullscreen:hover polygon,
-.control-buttons__fullscreen:focus polygon {
+.control-buttons__replay,
+.control-buttons__subtitles,
+.control-buttons__fullscreen {
+  fill: #5c6870;
+}
+
+.control-buttons__replay:hover,
+.control-buttons__replay:focus,
+.control-buttons__subtitles:hover,
+.control-buttons__subtitles:focus,
+.control-buttons__fullscreen:hover,
+.control-buttons__fullscreen:focus {
   fill: @darkgrey-light;
 }
 
-.control-buttons__replay:active path,
-.control-buttons__subtitles:active path,
-.control-buttons__fullscreen:active polygon {
-  background-color: @darkgrey-light;
-  opacity: 0.3;
+.control-buttons__replay:active,
+.control-buttons__subtitles:active,
+.control-buttons__fullscreen:active {
+  fill: rgba(51, 51, 51, 0.3);
 }
 
 .control-buttons__subtitles {
@@ -72,24 +77,24 @@
     margin-left: 442px;
   }
 
-  .control-buttons__replay path,
-  .control-buttons__subtitles path,
-  .control-buttons__fullscreen polygon {
+  .control-buttons__replay,
+  .control-buttons__subtitles,
+  .control-buttons__fullscreen {
     fill: @white-light;
   }
 
-  .control-buttons__replay:hover path,
-  .control-buttons__replay:focus path,
-  .control-buttons__subtitles:hover path,
-  .control-buttons__subtitles:focus path,
-  .control-buttons__fullscreen:hover polygon,
-  .control-buttons__fullscreen:focus polygon {
+  .control-buttons__replay:hover,
+  .control-buttons__replay:focus,
+  .control-buttons__subtitles:hover,
+  .control-buttons__subtitles:focus,
+  .control-buttons__fullscreen:hover,
+  .control-buttons__fullscreen:focus {
     fill: rgba(255, 255, 255, 0.6);
   }
 
-  .control-buttons__replay:active path,
-  .control-buttons__subtitles:active path,
-  .control-buttons__fullscreen:active polygon {
+  .control-buttons__replay:active,
+  .control-buttons__subtitles:active,
+  .control-buttons__fullscreen:active {
     fill: @white-light-down;
   }
 }
