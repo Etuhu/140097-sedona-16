@@ -35,8 +35,65 @@
   line-height: 26px;
 }
 
-.feedback-form__input::-webkit-input-placeholder,
-.feedback-form__textarea::-webkit-input-placeholder {
+.feedback-form__main-form input[type="text"]::-webkit-input-placeholder,
+.feedback-form__main-form input[type="email"]::-webkit-input-placeholder,
+.feedback-form__main-form input[type="tel"]::-webkit-input-placeholder,
+.feedback-form__main-form textarea::-webkit-input-placeholder {
+  .base-title();
+  font-family: "PTSans", "Arial", sans-serif;
+  text-transform: none;
+}
+
+.feedback-form__main-form input[type="text"]::-moz-placeholder,
+.feedback-form__main-form input[type="email"]::-moz-placeholder,
+.feedback-form__main-form input[type="tel"]::-moz-placeholder,
+.feedback-form__main-form textarea::-moz-placeholder {
+  .base-title();
+  color: @black-light;
+  opacity: 1;
+  font-family: "PTSans", "Arial", sans-serif;
+  text-transform: none;
+}
+
+.feedback-form__main-form input[type="text"]::-moz-placeholder,
+.feedback-form__main-form input[type="email"]::-moz-placeholder,
+.feedback-form__main-form input[type="tel"]::-moz-placeholder {
+  line-height: 55px;
+}
+
+.feedback-form__main-form input[type="text"]:focus::-moz-placeholder,
+.feedback-form__main-form input[type="email"]:focus::-moz-placeholder,
+.feedback-form__main-form input[type="tel"]:focus::-moz-placeholder {
+  line-height: 47px;
+}
+
+.feedback-form__main-form input[type="text"]:-moz-placeholder,
+.feedback-form__main-form input[type="email"]:-moz-placeholder,
+.feedback-form__main-form input[type="tel"]:-moz-placeholder,
+.feedback-form__main-form textarea:-moz-placeholder {
+  .base-title();
+  color: @black-light;
+  opacity: 1;
+  font-family: "PTSans", "Arial", sans-serif;
+  text-transform: none;
+}
+
+.feedback-form__main-form input[type="text"]:-moz-placeholder,
+.feedback-form__main-form input[type="email"]:-moz-placeholder,
+.feedback-form__main-form input[type="tel"]:-moz-placeholder {
+  line-height: 55px;
+}
+
+.feedback-form__main-form input[type="text"]:focus:-moz-placeholder,
+.feedback-form__main-form input[type="email"]:focus:-moz-placeholder,
+.feedback-form__main-form input[type="tel"]:focus:-moz-placeholder {
+  line-height: 47px;
+}
+
+.feedback-form__main-form input[type="text"]::-ms-input-placeholder,
+.feedback-form__main-form input[type="email"]::-ms-input-placeholder,
+.feedback-form__main-form input[type="tel"]::-ms-input-placeholder,
+.feedback-form__main-form textarea::-ms-input-placeholder {
   .base-title();
   font-family: "PTSans", "Arial", sans-serif;
   text-transform: none;
@@ -66,6 +123,7 @@
   padding-right: 14px;
   border: solid 4px #e5e5e5;
   background-color: @white-light;
+  outline: none;
 }
 
 .feedback-form__input--username {
@@ -97,6 +155,7 @@
   width: 280px;
   min-height: 58px;
   margin-left: 0;
+  padding: 0;
 }
 
 .feedback-form__btn:hover,
@@ -352,8 +411,8 @@
   padding: 13px 17px;
   border: solid 4px #e5e5e5;
   background-color: @white-light;
+  outline: none;
 }
-
 
 @media (min-width: @tablet-width) {
   .feedback-form__block--user {
@@ -536,7 +595,7 @@
 
   .feedback-form__block--emotions {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 61px;
   }
 
   .feedback-form__block--emotions .feedback-form__title {
@@ -577,6 +636,9 @@
   .feedback-form__btn {
     width: 324px;
     margin-left: 0;
+    padding-left: 64px;
+    padding-right: 54px;
+    text-align: left;
   }
 
   .feedback-form__footnote-wrapper {
@@ -636,19 +698,23 @@
   }
 
   .feedback-form__block--contacts {
-    margin-top: 30px;
+    margin-top: 29px;
+  }
+
+  .feedback-form__block--contacts .feedback-form__title {
+    margin-bottom: 25px;
   }
 
   .feedback-form__block--contacts .feedback-form__title::before {
     width: 280px;
     left: -342px;
-    top: 14px;
+    top: 15px;
   }
 
   .feedback-form__block--contacts .feedback-form__title::after {
     width: 280px;
     right: -342px;
-    top: 14px;
+    top: 15px;
   }
 
   .feedback-form__contacts-wrapper {
@@ -660,7 +726,7 @@
 
   .feedback-form__contacts-wrapper .feedback-form__field {
     display: block;
-    padding-top: 25px;
+    padding-top: 24px;
     margin-left: 80px;
   }
 
@@ -751,6 +817,7 @@
 
   .feedback-form__btn {
     width: 480px;
+    padding-left: 147px;
   }
 
   .feedback-form__footnote-wrapper {

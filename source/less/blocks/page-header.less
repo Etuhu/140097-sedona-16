@@ -13,6 +13,20 @@
   margin-left: 1px;
 }
 
+.page-header__open-btn {
+  position: relative;
+  top: -67px;
+  left: 128px;
+  visibility: hidden;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: transparent;
+  border: none;
+}
+
 @media (min-width: @tablet-width) {
   .page-header__logo {
     position: absolute;
@@ -23,6 +37,10 @@
 
   .page-header__logo-image {
     margin-left: 0;
+  }
+
+  .page-header__open-btn {
+    display: none;
   }
 }
 
