@@ -1,6 +1,11 @@
 .main-nav {
+  display: block;
   position: relative;
   background-color: @blue-light;
+}
+
+.main-nav--visible {
+  display: block;
 }
 
 .main-nav__close-btn {
@@ -15,6 +20,10 @@
   background-position: center;
   background-color: transparent;
   border: none;
+}
+
+.main-nav__close-btn--visible {
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
