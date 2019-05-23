@@ -1135,13 +1135,13 @@ input[type="radio"].visually-hidden {
 .social__link:active svg {
   opacity: 0.3;
 }
-.social__link--twitter {
+.social-link--twitter {
   padding: 15px;
 }
-.social__link--facebook {
+.social-link--facebook {
   padding: 15px;
 }
-.social__link--youtube {
+.social-link--youtube {
   padding: 13px;
 }
 .copyright__text {

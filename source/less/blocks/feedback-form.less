@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   text-align: left;
+  background-color: @white-light;
 }
 
 .feedback-form__block {
@@ -260,7 +261,7 @@
   outline: none;
 }
 
-.feedback-form__block--impression .feedback-form__field::before {
+.feedback-form__radio + .feedback-form__field::before {
   content: "";
   position: absolute;
   top: -14px;
@@ -271,36 +272,38 @@
   background-color: #f2f2f2;
 }
 
-.feedback-form__radio:checked + .feedback-form__field::before {
-  content: "";
-  position: absolute;
-  top: -14px;
-  left: 20px;
-  width: 22px;
-  height: 22px;
-  border: 17px solid #f2f2f2;
-  border-radius: 50%;
-  background-color: @darkgrey-light;
-}
-
-.feedback-form__block--impression .feedback-form__field:hover::before,
-.feedback-form__block--impression .feedback-form__field:focus::before {
+.feedback-form__radio + .feedback-form__field:hover::before,
+.feedback-form__radio + .feedback-form__field:focus::before {
   background-color: #e5e5e5;
   outline: none;
 }
 
-.feedback-form__radio:checked + .feedback-form__field:hover::before,
-.feedback-form__radio:checked + .feedback-form__field:focus::before {
-  border-color: #e5e5e5;
-  background-color: @darkgrey-light;
-}
-
-.feedback-form__block--impression .feedback-form__field:active::before {
+.feedback-form__radio + .feedback-form__field:active::before {
   background-color: #d5d5d5;
 }
 
-.feedback-form__radio:checked + .feedback-form__field:active::before {
-  border-color: #d5d5d5;
+.feedback-form__radio + .feedback-form__field::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  display: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: @darkgrey-light;
+}
+
+.feedback-form__radio:checked + .feedback-form__field::after {
+  display: block;
+}
+
+.feedback-form__radio:checked + .feedback-form__field:hover::after,
+.feedback-form__radio:checked + .feedback-form__field:focus::after {
+  background-color: @darkgrey-light;
+}
+
+.feedback-form__radio:checked + .feedback-form__field:active::after {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -401,6 +404,7 @@
   font-family: "PTSans", "Arial", sans-serif;
   text-transform: none;
   background-color: #f2f2f2;
+  overflow: auto;
 }
 
 .feedback-form__textarea:hover {
