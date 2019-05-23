@@ -128,7 +128,9 @@
 }
 
 .feedback-form__input--username {
-  width: 225px;
+  width: 229px;
+  padding-left: 21px;
+  margin-left: 10px;
 }
 
 .feedback-form__input--surname {
@@ -420,6 +422,8 @@
 
 @media (min-width: @tablet-width) {
   .feedback-form__block--user {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     margin: 0;
     padding-left: 37px;
@@ -439,6 +443,8 @@
 
   .feedback-form__input--username {
     width: 216px;
+    padding-left: 18px;
+    margin-left: 14px;
   }
 
   .feedback-form__input--surname {
@@ -450,6 +456,8 @@
   }
 
   .feedback-form__block--impression {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     order: -1;
     margin: 0;
@@ -483,6 +491,8 @@
   }
 
   .feedback-form__block--contacts {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-top: 31px;
     margin-bottom: 30px;
@@ -529,6 +539,11 @@
     margin-left: 60px;
   }
 
+  .feedback-form__contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   .feedback-form__field-wrapper {
     margin-bottom: 11px;
   }
@@ -558,6 +573,11 @@
 
   .feedback-form__field--checkbox {
     width: 30%;
+  }
+
+  .feedback-form__block--places {
+    display: flex;
+    flex-direction: column;
   }
 
   .feedback-form__block--places .feedback-form__field {
@@ -598,13 +618,15 @@
   }
 
   .feedback-form__block--emotions {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-bottom: 61px;
   }
 
   .feedback-form__block--emotions .feedback-form__title {
     position: relative;
-    margin-bottom: 55px;
+    margin-bottom: 56px;
     font-size: 21px;
   }
 
@@ -634,7 +656,7 @@
     width: 648px;
     height: 160px;
     margin-left: 41px;
-    margin-bottom: 53px;
+    margin-bottom: 59px;
   }
 
   .feedback-form__btn {
@@ -723,6 +745,7 @@
 
   .feedback-form__contacts-wrapper {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     padding-left: 39px;
     padding-top: 42px;
@@ -797,7 +820,7 @@
   }
 
   .feedback-form__block--emotions .feedback-form__title {
-    margin-bottom: 56px;
+    margin-bottom: 57px;
   }
 
   .feedback-form__block--emotions .feedback-form__title::before {
@@ -816,7 +839,8 @@
     width: 960px;
     height: 160px;
     margin-left: 101px;
-    margin-bottom: 52px;
+    margin-bottom: 58px;
+    padding-top: 16px;
   }
 
   .feedback-form__btn {

@@ -8,6 +8,9 @@
     <script type="text/javascript" src="js/picturefill.js"></script>
   </head>
   <body>
+    <div style="display: none">
+      <include src="source/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <nav class="main-nav">
         <button class="main-nav__close-btn" type="button"></button>
@@ -39,7 +42,7 @@
       </a>
       <button class="page-header__open-btn" type="button"></button>
     </header>
-    <main class="page-main page-main--form">
+    <main>
       <section class="banner">
         <h2 class="banner__title visually-hidden">Добро пожаловать в Седону!</h2>
         <div class="banner__wrapper">
@@ -55,48 +58,51 @@
         <form class="feedback-form__main-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="feedback-form__block feedback-form__block--user">
             <legend class="feedback-form__title">Представьтесь:</legend>
-            <label class="feedback-form__field" for="username">Имя<span>*</span>:</label>
-            <input class="feedback-form__input feedback-form__input--username" type="text" name="username" id="username" placeholder="Петр">
-            <label class="feedback-form__field" for="surname">Фамилия<span>*</span>:</label>
-            <input class="feedback-form__input feedback-form__input--surname" type="text" name="surname" id="surname" placeholder="Иванов">
-            <label class="feedback-form__field" for="middlename">Отчество:</label>
-            <input class="feedback-form__input feedback-form__input--middlename" type="text" name="middlename" id="middlename" placeholder="Александрович">
+            <label class="feedback-form__field" for="username">Имя<span>*</span>:
+              <input class="feedback-form__input feedback-form__input--username" type="text" name="username" id="username" placeholder="Петр" required>
+            </label>
+            <label class="feedback-form__field" for="surname">Фамилия<span>*</span>:
+              <input class="feedback-form__input feedback-form__input--surname" type="text" name="surname" id="surname" placeholder="Иванов" required>
+            </label>
+            <label class="feedback-form__field" for="middlename">Отчество:
+              <input class="feedback-form__input feedback-form__input--middlename" type="text" name="middlename" id="middlename" placeholder="Александрович">
+            </label>
           </fieldset>
           <fieldset class="feedback-form__block feedback-form__block--contacts">
             <legend class="feedback-form__title">Контактная информация:</legend>
             <div class="feedback-form__contacts-wrapper">
               <label class="feedback-form__field" for="phone"><span class="feedback-form__hidden-text">Контактный </span>телефон<span>*</span>:</label>
               <div class="feedback-form__field-wrapper">
-                <input class="feedback-form__input" type="tel" name="phone" id="phone" placeholder="Введите телефон">
+                <input class="feedback-form__input" type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="[1-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                 <span class="feedback-form__icon-block feedback-form__icon-block--phone"></span>
               </div>
               <label class="feedback-form__field" for="email">Электронная почта<span>*</span>:</label>
               <div class="feedback-form__field-wrapper">
-                <input class="feedback-form__input" type="email" name="email" id="email" placeholder="Введите e-mail">
+                <input class="feedback-form__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
                 <span class="feedback-form__icon-block feedback-form__icon-block--email"></span>
               </div>
             </div>
           </fieldset>
           <fieldset class="feedback-form__block feedback-form__block--impression">
             <legend class="feedback-form__title">Ваше общее впечатление:</legend>
-            <input class="visually-hidden feedback-form__radio" type="radio" name="user-impression" value="Скорее положительное" id="positive" checked="">
-            <label class="feedback-form__field" for="positive">Скорее положительное</label>
-            <input class="visually-hidden feedback-form__radio" type="radio" name="user-impression" value="Скорее отрицательное" id="negative">
-            <label class="feedback-form__field" for="negative">Скорее отрицательное</label>
-            <input class="visually-hidden feedback-form__radio" type="radio" name="user-impression" value="Затрудняюсь ответить" id="difficulty">
-            <label class="feedback-form__field" for="difficulty">Затрудняюсь ответить</label>
+            <input class="visually-hidden feedback-form__radio" type="radio" name="user-impression" value="Скорее положительное" id="positive" checked tabindex="-1">
+            <label class="feedback-form__field" for="positive" tabindex="0">Скорее положительное</label>
+            <input class="visually-hidden feedback-form__radio" type="radio" name="user-impression" value="Скорее отрицательное" id="negative" tabindex="-1">
+            <label class="feedback-form__field" for="negative" tabindex="0">Скорее отрицательное</label>
+            <input class="visually-hidden feedback-form__radio" type="radio" name="user-impression" value="Затрудняюсь ответить" id="difficulty" tabindex="-1">
+            <label class="feedback-form__field" for="difficulty" tabindex="0">Затрудняюсь ответить</label>
           </fieldset>
           <fieldset class="feedback-form__block feedback-form__block--places">
             <legend class="feedback-form__title">Посещенные достопримечательности:</legend>
             <div class="feedback-form__checkbox-wrapper">
-              <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Мост Дьявола" id="bridge" checked="">
-              <label class="feedback-form__field feedback-form__field--checkbox feedback-form__field--bridge" for="bridge">Мост Дьявола</label>
-              <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Гора-Колокол" id="mountain" checked="">
-              <label class="feedback-form__field feedback-form__field--checkbox feedback-form__field--mountain" for="mountain">Гора-Колокол</label>
-              <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Слайд-Парк" id="park" checked="">
-              <label class="feedback-form__field feedback-form__field--checkbox feedback-form__field--park" for="park">Слайд-парк</label>
-              <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Красные скалы" id="rocks">
-              <label class="feedback-form__field feedback-form__field--checkbox feedback-form__field--rocks" for="rocks">Красные скалы</label>
+              <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Мост Дьявола" id="bridge" checked tabindex="-1">
+              <label class="feedback-form__field feedback-form__field--checkbox feedback-form__field--bridge" for="bridge" tabindex="0">Мост Дьявола</label>
+              <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Гора-Колокол" id="mountain" checked tabindex="-1">
+              <label class="feedback-form__field feedback-form__field--checkbox feedback-form__field--mountain" for="mountain" tabindex="0">Гора-Колокол</label>
+              <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Слайд-Парк" id="park" checked tabindex="-1">
+              <label class="feedback-form__field feedback-form__field--checkbox feedback-form__field--park" for="park" tabindex="0">Слайд-парк</label>
+              <input class="visually-hidden feedback-form__checkbox" type="checkbox" name="place" value="Красные скалы" id="rocks" tabindex="-1">
+              <label class="feedback-form__field feedback-form__field--checkbox feedback-form__field--rocks" for="rocks" tabindex="0">Красные скалы</label>
             </div>
           </fieldset>
           <fieldset class="feedback-form__block feedback-form__block--emotions">
@@ -131,21 +137,21 @@
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
               <svg width="17.5px" height="14.663px">
-                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                <use xlink:href="#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
               <svg width="8.672px" height="18.944px">
-                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                <use xlink:href="#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy">
               <svg width="19.979px" height="14.015px">
-                <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                <use xlink:href="#icon-youtube"></use>
               </svg>
             </a>
           </li>
@@ -154,7 +160,7 @@
           <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="copyright__logo" width="26.943px" height="34.09px">
-              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+              <use xlink:href="#icon-htmlacademy"></use>
             </svg>
           </a>
         </div>
