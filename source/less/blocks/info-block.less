@@ -119,6 +119,7 @@
 }
 
 .info-block__blue--left {
+  order: 1;
   padding-top: 39px;
   padding-bottom: 39px;
 }
@@ -159,26 +160,16 @@
 .info-block__image {
   width: 320px;
   height: 260px;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow-y: hidden;
 }
 
-.info-block__image--right {
-  background-image: url("../img/main-city-mobile@1x.jpg");
-
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/main-city-mobile@2x.jpg");
-    background-size: 320px auto;
-  }
+.info-block__content-image {
+  width: auto;
+  height: auto;
 }
 
 .info-block__image--left {
-  background-image: url("../img/main-bridge-mobile@1x.jpg");
-
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/main-bridge-mobile@2x.jpg");
-    background-size: 320px auto;
-  }
+  order: 2;
 }
 
 @media (min-width: @tablet-width) {
@@ -195,6 +186,10 @@
     padding: 45px;
     padding-bottom: 44px;
     box-sizing: border-box;
+  }
+
+  .info-block__blue--left {
+    order: 0;
   }
 
   .info-block__blue--left .info-block__title {
@@ -228,23 +223,8 @@
     height: 256px;
   }
 
-  .info-block__image--right {
-    background-image: url("../img/main-city-tablet@1x.jpg");
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/main-city-tablet@2x.jpg");
-      background-size: 512px auto;
-    }
-  }
-
   .info-block__image--left {
-    order: -1;
-    background-image: url("../img/main-bridge-tablet@1x.jpg");
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/main-bridge-tablet@2x.jpg");
-      background-size: 512px auto;
-    }
+    order: 0;
   }
 
   .info-block__grey {
@@ -366,29 +346,21 @@
     padding: 0 72px;
   }
 
-
   .info-block__image {
     width: 800px;
   }
 
-  .info-block__image--right {
-    background-image: url("../img/main-city-desktop@1x.jpg");
-    background-position: 0 -71px;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/main-city-desktop@2x.jpg");
-      background-size: 800px auto;
-    }
+  .info-block__content-image {
+    width: auto;
+    height: auto;
   }
 
-  .info-block__image--left {
-    background-image: url("../img/main-bridge-desktop@1x.jpg");
-    background-position: 0 -76px;
+  .info-block__image--right .info-block__content-image {
+    margin-top: -71px;
+  }
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/main-bridge-desktop@2x.jpg");
-      background-size: 800px auto;
-    }
+  .info-block__image--left .info-block__content-image {
+    margin-top: -76px;
   }
 
   .info-block--form {
