@@ -5,30 +5,39 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/ptsans.woff" as="font">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+    <script type="text/javascript" src="js/picturefill.js"></script>
   </head>
   <body>
+    <div style="display: none">
+      <include src="source/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <nav class="main-nav">
+      <!-- Меню отображается при добавлении к тегу nav класса .main-nav--visible -->
         <button class="main-nav__close-btn" type="button"></button>
+        <!-- Кнопка закрытия меню ("крестик") отображается при добавлении к элементу button класса .main-nav__close-btn--visible -->
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list site-list--left">
             <li class="site-list__item site-list__item--current">
               <a class="site-list__link">Главная</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="photo.html">Фото и видео</a>
+              <a class="site-list__link site-list__link--second" href="photo.html">Фото и видео</a>
             </li>
           </ul>
           <ul class="main-nav__list site-list site-list--right">
             <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Форма отзыва</a>
+              <a class="site-list__link site-list__link--third" href="form.html">Форма отзыва</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#">HTML Academy</a>
+              <a class="site-list__link site-list__link--fourth" href="#">HTML Academy</a>
             </li>
           </ul>
         </div>
-        <button class="main-nav__open-btn" type="button"></button>
       </nav>
       <a class="page-header__logo">
         <picture>
@@ -37,8 +46,10 @@
           <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип Седоны">
         </picture>
       </a>
+      <button class="page-header__open-btn" type="button"></button>
+      <!-- Кнопка открытия меню ("гамбургер") прячется при добавлении элементу button класса .page-header__open-btn--unvisible -->
     </header>
-    <main class="page-main">
+    <main>
       <section class="banner banner--mainpage">
         <h2 class="banner__title visually-hidden">Добро пожаловать в Седону!</h2>
         <div class="banner__wrapper">
@@ -46,13 +57,13 @@
         </div>
       </section>
       <section class="info-block info-block--promo">
-        <h1 class="info-block__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <h1 class="info-block__title">Седона – небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p class="info-block__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
       <section class="info-block info-block--picture">
         <div class="info-block__blue">
           <h2 class="info-block__title">Настоящий городок</h2>
-          <p class="info-block__number">— №1 —</p>
+          <p class="info-block__number">– №1 –</p>
           <p class="info-block__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </div>
         <div class="info-block__image info-block__image--right"></div>
@@ -79,8 +90,8 @@
       </ul>
       <section class="info-block info-block--picture">
         <div class="info-block__blue info-block__blue--left">
-          <h2 class="info-block__title">Там есть Мост дьявола</h2>
-          <p class="info-block__number">— №2 —</p>
+          <h2 class="info-block__title"><span class="info-block__title-wrap">Там есть</span> <span class="info-block__title-wrap">Мост дьявола</span></h2>
+          <p class="info-block__number">– №2 –</p>
           <p class="info-block__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         </div>
         <div class="info-block__image info-block__image--left"></div>
@@ -88,17 +99,17 @@
       <section class="info-block info-block--grey-row">
         <div class="info-block__grey">
           <h2 class="info-block__title">Небольшая площадь</h2>
-          <p class="info-block__number">— №3 —</p>
+          <p class="info-block__number">– №3 –</p>
           <p class="info-block__description">Все интересные места находятся очень близко</p>
         </div>
         <div class="info-block__grey info-block__grey--middle">
           <h2 class="info-block__title">Красивая дорога</h2>
-          <p class="info-block__number">— №4 —</p>
+          <p class="info-block__number">– №4 –</p>
           <p class="info-block__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </div>
         <div class="info-block__grey info-block__grey--last">
           <h2 class="info-block__title">Мало туристов</h2>
-          <p class="info-block__number">— №5 —</p>
+          <p class="info-block__number">– №5 –</p>
           <p class="info-block__description">Большинство едет в гранд каньон и толпится там</p>
         </div>
       </section>
@@ -110,11 +121,12 @@
             <span>Укажите предполагаемые даты поездки,</span>
             <span>и мы покажем вам лучшие предложения гостиниц в седоне</span>
           </p>
-          <a class="hotel-search__link" href="#">Найти гостиницу</a>
+          <a class="hotel-search__link" href="hotel-search.html">Найти гостиницу</a>
         </div>
       </section>
       <section class="map">
         <h2 class="map__title visually-hidden">Седона на карте</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d313818.9764524659!2d-112.00094482888649!3d34.89043869134068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1558630711063!5m2!1sru!2sru" width="320" height="350" style="border:0" allowfullscreen></iframe>
       </section>
     </main>
     <footer class="page-footer">
@@ -122,23 +134,23 @@
         <h2 class="page-footer__title">#visitSedona</h2>
         <ul class="page-footer__social social">
           <li class="social__item">
-            <a class="social__link social-link--twitter" href="https://www.twitter.com/htmlacademy">
+            <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
               <svg width="17.5px" height="14.663px">
-                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                <use xlink:href="#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social-link--facebook" href="https://www.facebook.com/htmlacademy">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
               <svg width="8.672px" height="18.944px">
-                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                <use xlink:href="#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social-link--youtube" href="https://www.youtube.com/htmlacademy">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy">
               <svg width="19.979px" height="14.015px">
-                <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                <use xlink:href="#icon-youtube"></use>
               </svg>
             </a>
           </li>
@@ -147,7 +159,7 @@
           <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="copyright__logo" width="26.943px" height="34.09px">
-              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+              <use xlink:href="#icon-htmlacademy"></use>
             </svg>
           </a>
         </div>

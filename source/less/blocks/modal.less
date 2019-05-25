@@ -31,9 +31,9 @@
 
 .modal--error {
   display: none;
-  top: 1263px;
-  padding-left: 56px;
-  padding-right: 57px;
+  top: 1542px;
+  padding-left: 57px;
+  padding-right: 55px;
   padding-top: 41px;
   padding-bottom: 35px;
 }
@@ -54,11 +54,22 @@
 
 .modal--feedback-success {
   display: none;
-  top: 1590px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 45px;
-  padding-bottom: 20px;
+  top: 1870px;
+  padding: 20px;
+  padding-top: 44px;
+  z-index: 1;
+}
+
+.modal--feedback-success::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 320px;
+  height: 98px;
+  background-color: #f2f2f2;
+  z-index: -1;
 }
 
 .modal--feedback-success .modal__title {
@@ -67,7 +78,7 @@
 
 .modal--feedback-success .modal__description {
   padding: 0 20px;
-  margin-bottom: 55px;
+  margin-bottom: 54px;
 }
 
 .modal__text-block {
@@ -85,23 +96,24 @@
   }
 
   .modal--error {
-    top: 1398px;
-    left: 184px;
+    top: 1427px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 400px;
     padding-left: 50px;
     padding-right: 55px;
     padding-top: 58px;
-    padding-bottom: 50px;
+    padding-bottom: 49px;
   }
 
   .modal--error .modal__title {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
     padding: 0 23px;
     line-height: 40px;
   }
 
   .modal--error .modal__description {
-    margin-bottom: 33px;
+    margin-bottom: 32px;
   }
 
   .modal--error .modal__btn {
@@ -111,27 +123,20 @@
   }
 
   .modal--feedback-success {
-    top: 990px;
-    left: 64px;
+    top: 1019px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 640px;
 
     padding-left: 91px;
     padding-right: 91px;
-    padding-top: 51px;
+    padding-top: 52px;
     padding-bottom: 44px;
-    z-index: 1;
   }
 
   .modal--feedback-success::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    display: block;
     width: 640px;
     height: 146px;
-    background-color: #f2f2f2;
-    z-index: -1;
   }
 
   .modal--feedback-success .modal__wrapper {
@@ -143,7 +148,7 @@
   }
 
   .modal--feedback-success .modal__description {
-    margin-bottom: 79px;
+    margin-bottom: 78px;
   }
 
   .modal--feedback-success .modal__btn {
@@ -154,12 +159,20 @@
 
 @media (min-width: @desktop-width) {
   .modal--error {
-    top: 1359px;
-    left: 400px;
+    top: 1387px;
   }
 
   .modal--feedback-success {
-    top: 921px;
-    left: 279px;
+    top: 942px;
+    padding-left: 86px;
+    padding-top: 59px;
+  }
+
+  .modal--feedback-success .modal__description {
+    margin-bottom: 78px;
+  }
+
+  .modal--feedback-success .modal__btn {
+    margin-left: 4px;
   }
 }

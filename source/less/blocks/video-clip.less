@@ -1,7 +1,7 @@
 .video-clip {
   margin: 0 auto;
-  padding-top: 32px;
-  padding-bottom: 98px;
+  padding-top: 33px;
+  padding-bottom: 105px;
   background-color: @white-light;
 }
 
@@ -18,7 +18,9 @@
 .video-clip__controls {
   position: absolute;
   left: 20px;
-  bottom: -59px;
+  bottom: -66px;
+  display: flex;
+  flex-direction: column;
   width: 280px;
   min-height: 111px;
   cursor: pointer;
@@ -42,13 +44,13 @@
 .video-clip__description {
   margin: 0;
   padding: 0 25px;
-  padding-top: 27px;
+  padding-top: 26px;
   padding-bottom: 35px;
 }
 
 @media (min-width: @tablet-width) {
   .video-clip {
-    padding-bottom: 40px;
+    padding-bottom: 41px;
   }
 
   .video-clip__wrapper {
@@ -105,5 +107,6 @@
   .video-clip__controls {
     left: 199px;
     width: 800px;
+    bottom: 0;
   }
 }

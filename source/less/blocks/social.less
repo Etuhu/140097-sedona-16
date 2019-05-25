@@ -1,5 +1,6 @@
 .social {
   padding: 0;
+  padding-left: 5px;
   margin: 0;
   margin-bottom: 36px;
 
@@ -19,6 +20,12 @@
   background-color: @blue-light;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.social__link--facebook {
+  width: 47px;
+  padding: 15px;
+  padding-top: 14px;
 }
 
 .social__link svg {
@@ -41,14 +48,25 @@
   opacity: 0.3;
 }
 
-.social-link--twitter {
+.social__link--twitter {
   padding: 15px;
+  padding-left: 14px;
 }
 
-.social-link--facebook {
-  padding: 15px;
-}
-
-.social-link--youtube {
+.social__link--youtube {
   padding: 13px;
+  padding-top: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    padding-left: 0;
+    margin-left: -2px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    margin-left: -1px;
+  }
 }
