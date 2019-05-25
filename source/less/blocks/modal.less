@@ -1,6 +1,6 @@
 .modal {
   width: 320px;
-  position: absolute;
+  position: fixed;
   background-color: @white-light;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
   box-sizing: border-box;
@@ -31,7 +31,7 @@
 
 .modal--error {
   display: none;
-  top: 1542px;
+  top: 40%;
   padding-left: 57px;
   padding-right: 55px;
   padding-top: 41px;
@@ -54,7 +54,7 @@
 
 .modal--feedback-success {
   display: none;
-  top: 1870px;
+  top: 40%;
   padding: 20px;
   padding-top: 44px;
   z-index: 1;
@@ -96,7 +96,6 @@
   }
 
   .modal--error {
-    top: 1427px;
     left: 50%;
     transform: translateX(-50%);
     width: 400px;
@@ -123,7 +122,6 @@
   }
 
   .modal--feedback-success {
-    top: 1019px;
     left: 50%;
     transform: translateX(-50%);
     width: 640px;
@@ -158,12 +156,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .modal--error {
-    top: 1387px;
-  }
-
   .modal--feedback-success {
-    top: 942px;
     padding-left: 86px;
     padding-top: 59px;
   }
